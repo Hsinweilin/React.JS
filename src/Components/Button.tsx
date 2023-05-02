@@ -1,10 +1,18 @@
-
-
-
-const Button = () => {
-  return (
-    <div>Button</div>
-  )
+interface Props {
+  children: string;
+  color?: string;
+  onClick: () => void;
 }
 
-export default Button
+const Button = ({ children, onClick, color = "primary" }: Props) => {
+  return (
+    //it's the actual button object that can have build in onClick, Button is just another component, need props to have actions
+    <>
+      <button className={"btn btn-" + color} onClick={onClick}>
+        {children}
+      </button>
+    </>
+  );
+};
+
+export default Button;
