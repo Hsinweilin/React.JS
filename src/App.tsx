@@ -1,7 +1,13 @@
-import ListGroup from "./Components/ListGroup"//now we can use this as normal HTML component
+import ListGroup from "./Components/ListGroup"; //now we can use this as normal HTML component
 
 function App() {
-  return <div><ListGroup></ListGroup></div>
+  let items = ["New York", "San Francisco", "Tokyo", "London"];
+
+  return (
+    <div>
+      <ListGroup items={items} heading="Cities" />
+    </div>
+  );
 }
 
-export default App 
+export default App;
